@@ -22,8 +22,22 @@ namespace EquazioniLibrary
             }
             return flag;
         }
+        public static bool IsInconsisted(double a, double b)
+        {
+            bool flag = true;
 
-        
+            if (a == 0 && b != 0)
+            {
+                flag = true;
+            }
+            else
+            {
+                flag = false;
+            }
+            return flag;
+        }
+
+       
 
 
 
