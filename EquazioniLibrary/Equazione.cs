@@ -19,18 +19,15 @@ namespace EquazioniLibrary
             return determinato;
         }
 
-        public static bool IsInconsisted(double a, double b)
+        public static bool IsInconsisted(double a)
         {
-            bool impossibile = true;
+            bool impossibile = false;
 
-            if (a == 0 && b != 0)
+            if (a == 0)
             {
                 impossibile = true;
             }
-            else
-            {
-                impossibile = false;
-            }
+           
             return impossibile;
         }
 
