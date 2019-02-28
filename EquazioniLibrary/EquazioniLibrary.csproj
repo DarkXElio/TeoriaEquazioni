@@ -44,11 +44,5 @@
     <Compile Include="Equazione.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EquazioneLibrary.Test\EquazioneLibrary.Test.csproj">
-      <Project>{bd843e7a-19f4-4eb6-8912-1bd66e5af26f}</Project>
-      <Name>EquazioneLibrary.Test</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

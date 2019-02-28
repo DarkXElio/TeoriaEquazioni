@@ -9,6 +9,14 @@ namespace EquazioneLibrary.Test
         [TestMethod]
         public void TestMethod1()
         {
+            double a = 1;
+            bool resultato = true;
+
+            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a);
+
+            Assert.AreEqual(resultato, determinate);
+
         }
+
     }
 }

@@ -8,33 +8,30 @@ namespace EquazioniLibrary
 {
     public class Equazione
     {
-      public static bool IsDetermined(double a , double b)
+      public static bool IsDetermined(double a)
         {
-            bool flag = true;
+            bool determinato = false;
 
-            if(a!= 0 && b!=0)
+            if(a!= 0)
             {
-                flag = true;
+                determinato = true;
             }
-            else
-            {
-                flag = false;
-            }
-            return flag;
+            return determinato;
         }
+
         public static bool IsInconsisted(double a, double b)
         {
-            bool flag = true;
+            bool impossibile = true;
 
             if (a == 0 && b != 0)
             {
-                flag = true;
+                impossibile = true;
             }
             else
             {
-                flag = false;
+                impossibile = false;
             }
-            return flag;
+            return impossibile;
         }
 
        
