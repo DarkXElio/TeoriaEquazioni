@@ -8,6 +8,24 @@ namespace EquazioniLibrary
 {
     public class Equazione
     {
-        bool IsDetermined;
+      public static bool IsDetermined(double a , double b)
+        {
+            bool flag = true;
+
+            if(a!= 0 && b!=0)
+            {
+                flag = true;
+            }
+            else
+            {
+                flag = false;
+            }
+            return flag;
+        }
+
+        
+
+
+
     }
 }
