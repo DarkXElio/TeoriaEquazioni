@@ -10,24 +10,27 @@ namespace EquazioneLibrary.Test
         public void Determinato1()
         {
             double a = 1;
+            double b = 0;
             bool resultato = true;
-            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a);
+            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a,b);
             Assert.AreEqual(resultato, determinate);
         }
         [TestMethod]
         public void Determinato2()
         {
             double a = 0;
+            double b = 0;
             bool resultato = false;
-            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a);
+            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a,b);
             Assert.AreEqual(resultato, determinate);
         }
         [TestMethod]
         public void Determinato3()
         {
             double a = -1;
+            double b = 0;
             bool resultato = true;
-            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a);
+            bool determinate = EquazioniLibrary.Equazione.IsDetermined(a,b);
             Assert.AreEqual(resultato, determinate);
         }
 
@@ -35,16 +38,18 @@ namespace EquazioneLibrary.Test
         public void Impossibile1()
         {
             double a = 1;
+            double b = 0;
             bool resultato = false;
-            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a);
+            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a ,b);
             Assert.AreEqual(resultato, determinate);
         }
         [TestMethod]
         public void Impossibile3()
         {
             double a = -1;
+            double b = 0;
             bool resultato = false;
-            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a);
+            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a,b);
             Assert.AreEqual(resultato, determinate);
         }
 
@@ -52,8 +57,9 @@ namespace EquazioneLibrary.Test
         public void Impossibile2()
         {
             double a = 0;
+            double b = 0;
             bool resultato = true;
-            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a);
+            bool determinate = EquazioniLibrary.Equazione.IsInconsisted(a,b);
             Assert.AreEqual(resultato, determinate);
         }
         [TestMethod]
@@ -138,10 +144,42 @@ namespace EquazioneLibrary.Test
             Assert.AreEqual(resultato, testresultato);
         }
         [TestMethod]
-        public void Risolvo_equazione()
+
+        public void EquationDegree2()
         {
-          
+            double a = 0, b = 3;
+            string risposta_attesa = "Impossibile";
+            string test = EquazioniLibrary.Equazione.EquationDegree(a, b);
+
+            Assert.AreEqual(risposta_attesa, test);
+
         }
+        [TestMethod]
+
+        public void EquationDegree3()
+        {
+            double a = 1, b = 3;
+
+            string risposta_attesa = "Indeterminato";
+            string test = EquazioniLibrary.Equazione.EquationDegree(a, b);
+
+            Assert.AreEqual(risposta_attesa, test);
+
+        }
+
+        [TestMethod]
+
+        public void EquationDegree4()
+        {
+            double a = 1, b = -3;
+
+            string risposta_attesa = "Indeterminato";
+            string test = EquazioniLibrary.Equazione.EquationDegree(a, b);
+
+            Assert.AreEqual(risposta_attesa, test);
+
+        }
+
 
 
 

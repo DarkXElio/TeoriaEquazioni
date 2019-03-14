@@ -8,7 +8,7 @@ namespace EquazioniLibrary
 {
     public class Equazione
     {
-      public static bool IsDetermined(double a)
+      public static bool IsDetermined(double a , double b)
         {
             bool determinato = false;
             if(a!= 0)
@@ -18,7 +18,7 @@ namespace EquazioniLibrary
             return determinato;
         }
 
-        public static bool IsInconsisted(double a)
+        public static bool IsInconsisted(double a , double b)
         {
             bool impossibile = false;
             if (a == 0)
@@ -48,6 +48,22 @@ namespace EquazioniLibrary
             double delta = 0;
 
             return delta;
+        }
+
+
+        static public string EquationDegree(double a, double b)
+        {
+            string resultato = "";
+            if (IsDetermined(a, b) == true) resultato = "Indeterminato";
+            if (IsInconsisted(a, b) == true) resultato = "Impossibile";
+
+
+            if (resultato == "")
+            {
+                resultato = $"x={-b / a}";
+            }
+
+            return resultato;
         }
 
 
